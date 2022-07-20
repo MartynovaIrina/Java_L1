@@ -14,13 +14,13 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
 
         int amountOfFruits = 3;
-        int[] weightOfFruits = new int[amountOfFruits];
+        double[] weightOfFruits = new double[amountOfFruits];
         int[] arr = new int[amountOfFruits]; //array for current quantity options
 
         System.out.println("Please enter weight of present.");
 
-        int weightOfPresent = scanner.nextInt();
-        int sum;
+        double weightOfPresent = scanner.nextDouble();
+        double sum;
         int possibleCombinations = 0;
 
         System.out.println("Please enter weight of 3 fruits.");
