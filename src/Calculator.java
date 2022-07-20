@@ -10,17 +10,17 @@ public class Calculator {
 
         while (!calculatorState.equals(wordToStopCalculator)){
 
-            int firstNumber = getNumber();
-            int secondNumber = getNumber();
+            double firstNumber = getNumber();
+            double secondNumber = getNumber();
             char operator = getOperator();
 
             //checking if secondNumber is null and operation is division
             while (secondNumber == 0 && String.valueOf(operator).equals("/")) {
                 System.out.println("You can't divide by zero. Please enter another number");
-                secondNumber = scanner.nextInt();
+                secondNumber = scanner.nextDouble();
             }
 
-            int result = getResult(firstNumber, secondNumber, operator);
+            double result = getResult(firstNumber, secondNumber, operator);
 
             System.out.println(firstNumber + " " + operator + " " + secondNumber + " = " + result);
             System.out.println("Please type any letter to continue.\nType 'stop' to exit.");
@@ -28,11 +28,11 @@ public class Calculator {
         }
         scanner.close();
     }
-    public static int getNumber(){
-        int number;
+    public static double getNumber(){
+        double number;
         System.out.println("Please enter a number.");
-        if (scanner.hasNextInt()){
-            number = scanner.nextInt();
+        if (scanner.hasNextDouble()){
+            number = scanner.nextDouble();
         }
         else {
             System.out.println("Error! Please enter a number.");
@@ -58,8 +58,8 @@ public class Calculator {
         return operator;
     }
 
-    public static int getResult(int firstNumber, int secondNumber, char operator){
-        int result = 0;
+    public static double getResult(double firstNumber, double secondNumber, char operator){
+        double result = 0;
         switch (operator) {
             case '+':
                 result = firstNumber + secondNumber;
