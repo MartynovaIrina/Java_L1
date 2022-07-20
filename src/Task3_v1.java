@@ -8,7 +8,7 @@ import java.util.Scanner;
 	2 вариант - 2 яблока весом 15 и 1 груша.
 	3 вариант - 4 груши.
 */
-public class Task3 {
+public class Task3_v1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +23,9 @@ public class Task3 {
         int sum;
         int possibleCombinations = 0;
 
-        System.out.println("Please enter weight of 3 fruits.");
+        System.out.printf("Please enter weight of %d fruits.", amountOfFruits);
+        System.out.println();
+
         for (int i = 0; i < amountOfFruits; i++) {
             weightOfFruits[i] = scanner.nextInt();
         }

@@ -24,7 +24,7 @@ public class Calculator {
 
             System.out.println(firstNumber + " " + operator + " " + secondNumber + " = " + result);
             System.out.println("Please type any letter to continue.\nType 'stop' to exit.");
-            calculatorState = scanner.next();
+            calculatorState = scanner.next().toLowerCase();
         }
         scanner.close();
     }
