@@ -13,7 +13,7 @@ public class Task2 {
         int leftSideTicketSum = 0;
         int rightSideTicketSum = 0;
         int counter = 0;
-        int numberOfRightTicketConditions = 2;
+        int numberOfRightTicketConditions = 2; //ticket should be 6-digit and contain only numbers
 
         String ticketNumberString;
 
